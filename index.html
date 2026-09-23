@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Comercial & Protocolo de Negociación con India</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D35400;      /* Azafrán oscuro / Cobre */
+            --primary-light: #E67E22;/* Azafrán brillante */
+            --secondary: #1A252C;    /* Azul noche profundo */
+            --accent: #F39C12;       /* Dorado */
+            --bg-body: #FDFBF7;      /* Marfil suave */
+            --bg-card: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-muted: #626C71;
+            --border-color: #E8E2D5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Hero / Header Principal */
+        header.hero {
+            background: linear-gradient(135deg, rgba(26, 37, 44, 0.95), rgba(44, 62, 80, 0.9)), 
+                        url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 90px 20px;
+            border-bottom: 5px solid var(--accent);
+            position: relative;
+        }
+
+        header.hero::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808); /* Colores de la bandera */
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero h2 {
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: #ECF0F1;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+        }
+
+        .hero-meta {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(243, 156, 18, 0.4);
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Secciones */
+        section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border-left: 5px solid var(--primary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        h2.section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px dashed var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h2.section-title span {
+            color: var(--primary);
+        }
+
+        h3.subsection-title {
+            color: var(--primary-light);
+            font-size: 1.25rem;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        /* Tarjetas Destacadas e Iconos / Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: #FDFBF7;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(211, 84, 0, 0.12);
+            border-color: var(--primary-light);
+        }
+
+        .card h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Listas Especiales */
+        ul.custom-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+
+        ul.custom-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tablas Elegantes */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background: #ffffff;
+        }
+
+        th {
+            background-color: var(--secondary);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        tr:hover {
+            background-color: #FAF5EF;
+        }
+
+        /* Destacado de Valor / Métricas */
+        .metric-badge {
+            display: inline-block;
+            background: rgba(230, 126, 34, 0.15);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: #BDC3C7;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+
+        footer p {
+            color: #BDC3C7;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Adaptabilidad Móvil */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            section { padding: 25px; }
+            .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+        <h1>Guía de Negociación y Protocolo con India</h1>
+        <h2>Fundamentos culturales, protocolo empresarial y estrategia comercial bilateral Bolivia–India</h2>
+        <div class="hero-meta">Septiembre de 2026 | Fuentes: UN Comtrade, FMI, ITC Trade Map, INE</div>
+    </header>
+
+    <div class="container">
+
+        <!-- SECCIÓN 1 -->
+        <section>
+            <h2 class="section-title"><span>01.</span> Contexto General de India</h2>
+            <h3 class="subsection-title">1.1. Historia y Contexto Cultural</h3>
+            <p>India es heredera de una de las civilizaciones continuas más antiguas del planeta (+3.000 años de historia). Su profundidad histórica ha moldeado una sociedad de gran diversidad religiosa, lingüística y étnica.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h4>🤝 Colectivismo</h4>
+                    <p>Las decisiones no son individuales; involucran a la familia extendida, socios o a la jerarquía corporativa completa.</p>
+                </div>
+                <div class="card">
+                    <h4>⏳ Karma y Tiempo</h4>
+                    <p>Favorece las relaciones a largo plazo. La construcción de confianza (<em>relationship building</em>) es indispensable.</p>
+                </div>
+                <div class="card">
+                    <h4>🏛️ Jerarquía Social</h4>
+                    <p>Condiciona la comunicación y la toma de decisiones dentro de estructuras muy verticales.</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">1.2. Datos Básicos y Perfil Económico</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Detalle / Valor de Referencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Ubicación & Capital</strong></td><td>Sur de Asia / Nueva Delhi</td></tr>
+                        <tr><td><strong>Población</strong></td><td>+1.400 millones de habitantes (el más poblado del mundo)</td></tr>
+                        <tr><td><strong>Idiomas Oficiales</strong></td><td>Hindi e inglés (+22 lenguas reconocidas)</td></tr>
+                        <tr><td><strong>Moneda</strong></td><td>Rupia india (INR) — Tipo de cambio ≈ 83,7 USD/INR</td></tr>
+                        <tr><td><strong>Crecimiento PIB</strong></td><td>≈ 6,5% (2024); proyección 6,2%–6,6% (2025–2026)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2 -->
+        <section>
+            <h2 class="section-title"><span>02.</span> Entorno Empresarial y Protocolo</h2>
+            <p>El concepto de <strong>"Jugaad"</strong> —solución ingeniosa, flexible y de bajo costo— es central para entender la mentalidad empresarial india.</p>
+            
+            <h3 class="subsection-title">Normas Clave de Etiqueta</h3>
+            <ul class="custom-list">
+                <li><strong>Vestimenta:</strong> Traje formal y conservador. Evitar prendas de cuero frente a interlocutores hindúes ortodoxos.</li>
+                <li><strong>Saludo:</strong> El <em>Namaste</em> (manos juntas e inclinación) es sumamente valorado. Apretón de manos común en empresas.</li>
+                <li><strong>Tarjetas de presentación:</strong> Entregar y recibir siempre con la mano derecha o ambas manos (nunca solo la izquierda).</li>
+                <li><strong>Etiqueta en comidas:</strong> Gran porcentaje de la población es vegetariana. No ofrecer carne de res (hindúes) ni cerdo (musulmanes).</li>
+                <li><strong>Comunicación Indirecta:</strong> Un "no" categórico suele expresarse como "lo intentaremos" o "lo vamos a revisar".</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN 3 -->
+        <section>
+            <h2 class="section-title"><span>03.</span> Estrategia de Negociación</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>1. Preparación</h4>
+                    <p>Investigar la estructura societaria, mapear la cadena de mando real y llevar ofertas flexibles.</p>
+                </div>
+                <div class="card">
+                    <h4>2. Desarrollo</h4>
+                    <p>Priorizar la relación interpersonal. Esperar regateo extendido, anclaje alto y uso del silencio.</p>
+                </div>
+                <div class="card">
+                    <h4>3. Cierre y Seguimiento</h4>
+                    <p>Detallar estrictamente por escrito los plazos, Incoterms y arbitraje. Mantener contacto continuo tras la firma.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4 -->
+        <section>
+            <h2 class="section-title"><span>04.</span> Comercio Bilateral Bolivia–India</h2>
+            <p>En 2024, Bolivia exportó <span class="metric-badge">USD 371 M</span> a India e importó <span class="metric-badge">USD 182 M</span>, generando un superávit de <span class="metric-badge">USD 189 M</span>, fuertemente concentrado en el oro.</p>
+
+            <h3 class="subsection-title">Top Productos Comercializados (2024)</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Exportaciones Bolivia ➔ India</th>
+                            <th>Valor (USD)</th>
+                            <th>Importaciones India ➔ Bolivia</th>
+                            <th>Valor (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Oro y metales preciosos</td>
+                            <td>$363.350.000 (97,9%)</td>
+                            <td>Vehículos y autopartes</td>
+                            <td>$72.070.000 (39,5%)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Minerales, escorias y cenizas</td>
+                            <td>$3.180.000 (0,9%)</td>
+                            <td>Productos farmacéuticos</td>
+                            <td>$33.440.000 (18,3%)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sal, azufre y piedra</td>
+                            <td>$3.130.000 (0,8%)</td>
+                            <td>Maquinaria y calderas</td>
+                            <td>$21.300.000 (11,7%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5 Y 6 -->
+        <section>
+            <h2 class="section-title"><span>05.</span> Oportunidades y Proyección al 2028</h2>
+            <p>Se estima un potencial exportador no explotado de <strong>USD 25 millones adicionales</strong> en sectores no auríferos (Quinua, sésamo, castaña, semillas, minerales no auríferos y cueros).</p>
+
+            <h3 class="subsection-title">Escenarios de Captura (Exportaciones no auríferas)</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Escenario</th>
+                            <th>Captura del Potencial</th>
+                            <th>USD Adicionales Proyectados</th>
+                            <th>Total Exportaciones (Excl. Oro)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pesimista</strong></td>
+                            <td>15%</td>
+                            <td>+ $3,75 M</td>
+                            <td>$11,75 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moderado</strong></td>
+                            <td>35%</td>
+                            <td>+ $8,75 M</td>
+                            <td>$16,75 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optimista</strong></td>
+                            <td>60%</td>
+                            <td>+ $15,00 M</td>
+                            <td>$23,00 M</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7 -->
+        <section>
+            <h2 class="section-title"><span>06.</span> Recomendaciones Estratégicas</h2>
+            <ul class="custom-list">
+                <li><strong>Planificación:</strong> Establecer objetivos claros y llevar materiales técnicos traducidos al inglés.</li>
+                <li><strong>Adaptación:</strong> Invertir tiempo en construir una relación personal sólida antes de negociar precios.</li>
+                <li><strong>Socios Locales:</strong> Apoyarse en cámaras binacionales y evaluar <em>local partners</em> para navegar la regulación.</li>
+                <li><strong>Seguimiento:</strong> Formalizar el acuerdo minuciosamente y cultivar el contacto post-venta de forma permanente.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Guía Sectorial de Comercio Exterior — Bolivia & India</p>
+        <p>© 2026 Reservados todos los derechos.</p>
+    </footer>
+
+</body>
+</html>
